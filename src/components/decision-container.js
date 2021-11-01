@@ -89,6 +89,7 @@ class DecisionContainer extends Component {
               </p>
             ))}
           </Stack>
+          
           <FloatingLabel
             controlId="floatingInput"
             label="Add Option. Type and press Enter"

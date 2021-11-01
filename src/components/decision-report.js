@@ -20,17 +20,25 @@ export default class DecisionReport extends Component {
             <span style={{ fontWeight: "700" }}> Question: </span>{" "}
             {report.question}
           </p>
-          {report?.options.map(({ option, picked }, index) => (
-            <p
-              style={{ width: "40%", textAlign: "left", fontWeight: "600" }}
-              className={`p-1 my-1 ml-4 ${
-                picked ? "checked text-light bg-info" : ""
-              }`}
-              key={index}
-            >
-              {option}
-            </p>
-          ))}
+          <p
+            className="text-dark p-1 my-1"
+            style={{ width: "100%", textAlign: "left", fontWeight: "700" }}
+          >
+            Answers
+          </p>
+          <Container>
+            {report?.options.map(({ option, picked }, index) => (
+              <p
+                style={{ width: "40%", textAlign: "left", fontWeight: "600" }}
+                className={`p-1 my-1 ml-4 ${
+                  picked ? "checked text-light bg-info" : ""
+                }`}
+                key={index}
+              >
+                {option}
+              </p>
+            ))}
+          </Container>
         </Stack>
         <Button
           style={{ marginTop: "10px", marginBottom: "10px" }}
